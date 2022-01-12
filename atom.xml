@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>The grave of brain cells</title>
   
   
   <link href="https://cccckv.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://cccckv.github.io/blog/"/>
-  <updated>2022-01-11T08:56:25.002Z</updated>
+  <updated>2022-01-12T02:52:05.253Z</updated>
   <id>https://cccckv.github.io/blog/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>CCCCCkw</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EasyGoHexo</title>
+    <link href="https://cccckv.github.io/blog/2022/01/12/EasyGoHexo/"/>
+    <id>https://cccckv.github.io/blog/2022/01/12/EasyGoHexo/</id>
+    <published>2022-01-12T02:52:05.000Z</published>
+    <updated>2022-01-12T02:52:05.253Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
