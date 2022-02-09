@@ -6,7 +6,7 @@
   <link href="https://cccckv.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://cccckv.github.io/blog/"/>
-  <updated>2022-01-17T09:05:36.659Z</updated>
+  <updated>2022-02-09T07:11:02.507Z</updated>
   <id>https://cccckv.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>集合处理</title>
+    <link href="https://cccckv.github.io/blog/2022/02/09/%E9%9B%86%E5%90%88%E5%A4%84%E7%90%86/"/>
+    <id>https://cccckv.github.io/blog/2022/02/09/%E9%9B%86%E5%90%88%E5%A4%84%E7%90%86/</id>
+    <published>2022-02-09T06:33:29.000Z</published>
+    <updated>2022-02-09T07:11:02.507Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="集合处理"><a href="#集合处理" class="headerlink" title="集合处理"></a>集合处理</h2><h3 id="1-关于-hashCode-和-equals-的处理，遵循如下规则："><a href="#1-关于-hashCode-和-equals-的处理，遵循如下规则：" class="headerlink" title="1.关于 hashCode 和 equals 的处理，遵循如下规则："></a>1.关于 hashCode 和 equals 的处理，遵循如下规则：</h3><p>1） 只要重写 equals，就必须重写 hashCode。<br>2） 因为 Set 存储的是不重复的对象，依据 hashCode 和 equals 进行判断，所以 Set 存储的对象必须重写这两个方法。<br>3） 如果自定义对象作为 Map 的键，那么必须覆写 hashCode 和 equals。</p><h3 id="2-判断所有集合内部的元素是否为空，使用-isEmpty-方法，而不是-size-0-的方式。"><a href="#2-判断所有集合内部的元素是否为空，使用-isEmpty-方法，而不是-size-0-的方式。" class="headerlink" title="2.判断所有集合内部的元素是否为空，使用 isEmpty()方法，而不是 size()==0 的方式。"></a>2.判断所有集合内部的元素是否为空，使用 isEmpty()方法，而不是 size()==0 的方式。</h3><h3 id="3-使用-Map-的方法-keySet-values-entrySet-返回集合对象时，不可以对其进行添加元素操作，否则会抛出-UnsupportedOperationException-异常"><a href="#3-使用-Map-的方法-keySet-values-entrySet-返回集合对象时，不可以对其进行添加元素操作，否则会抛出-UnsupportedOperationException-异常" class="headerlink" title="3.使用 Map 的方法 keySet()/values()/entrySet()返回集合对象时，不可以对其进行添加元素操作，否则会抛出 UnsupportedOperationException 异常"></a>3.使用 Map 的方法 keySet()/values()/entrySet()返回集合对象时，不可以对其进行添加元素操作，否则会抛出 UnsupportedOperationException 异常</h3><h3 id="4-使用集合转数组的方法，必须使用集合的-toArray-T-array-，传入的是类型完全一致、长度为-0-的空数组。"><a href="#4-使用集合转数组的方法，必须使用集合的-toArray-T-array-，传入的是类型完全一致、长度为-0-的空数组。" class="headerlink" title="4.使用集合转数组的方法，必须使用集合的 toArray(T[] array)，传入的是类型完全一致、长度为 0 的空数组。"></a>4.使用集合转数组的方法，必须使用集合的 toArray(T[] array)，传入的是类型完全一致、长度为 0 的空数组。</h3><p>使用 toArray 带参方法，数组空间大小的 length，<br>1） 等于 0，动态创建与 size 相同的数组，性能最好。<br>2） 大于 0 但小于 size，重新创建大小等于 size 的数组，增加 GC 负担。<br>3） 等于 size，在高并发情况下，数组创建完成之后，size 正在变大的情况下，负面影响与 2 相同。<br>4） 大于 size，空间浪费，且在 size 处插入 null 值，存在 NPE 隐患。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(2);</span><br><span class="line">list.add(&quot;guan&quot;);</span><br><span class="line">list.add(&quot;bao&quot;);</span><br><span class="line">String[] array = list.toArray(new String[0]);</span><br></pre></td></tr></table></figure><h3 id="5-在使用-Collection-接口任何实现类的-addAll-方法时，都要对输入的集合参数进行-NPE-判断。"><a href="#5-在使用-Collection-接口任何实现类的-addAll-方法时，都要对输入的集合参数进行-NPE-判断。" class="headerlink" title="5.在使用 Collection 接口任何实现类的 addAll()方法时，都要对输入的集合参数进行 NPE 判断。"></a>5.在使用 Collection 接口任何实现类的 addAll()方法时，都要对输入的集合参数进行 NPE 判断。</h3><p>在 ArrayList#addAll 方法的第一行代码即 Object[] a = c.toArray(); 其中 c 为输入集合参数，如果<br>为 null，则直接抛出异常。</p><h3 id="6-泛型通配符"><a href="#6-泛型通配符" class="headerlink" title="6.泛型通配符"></a>6.泛型通配符</h3><p>泛型通配符&lt;? extends T&gt;来接收返回的数据，此写法的泛型集合不能使用 add 方法， 而&lt;? super T&gt;不能使用 get 方法，两者在接口调用赋值的场景中容易出错。<br>说明：扩展说一下 PECS(Producer Extends Consumer Super)原则：第一、频繁往外读取内容的，适合用<br>&lt;? extends T&gt;。第二、经常往里插入的，适合用&lt;? super T</p><h3 id="7-不要在-foreach-循环里进行元素的-remove-add-操作。remove-元素请使用-Iterator方式，如果并发操作，需要对-Iterator-对象加锁"><a href="#7-不要在-foreach-循环里进行元素的-remove-add-操作。remove-元素请使用-Iterator方式，如果并发操作，需要对-Iterator-对象加锁" class="headerlink" title="7.不要在 foreach 循环里进行元素的 remove/add 操作。remove 元素请使用 Iterator方式，如果并发操作，需要对 Iterator 对象加锁"></a>7.不要在 foreach 循环里进行元素的 remove/add 操作。remove 元素请使用 Iterator方式，如果并发操作，需要对 Iterator 对象加锁</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">list.add(&quot;1&quot;);</span><br><span class="line">list.add(&quot;2&quot;);</span><br><span class="line">Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">while (iterator.hasNext()) &#123;</span><br><span class="line">String item = iterator.next();</span><br><span class="line">if (删除元素的条件) &#123;</span><br><span class="line">iterator.remove();</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure><h3 id="8-使用-entrySet-遍历-Map-类集合-KV，而不是-keySet-方式进行遍历。"><a href="#8-使用-entrySet-遍历-Map-类集合-KV，而不是-keySet-方式进行遍历。" class="headerlink" title="8.使用 entrySet 遍历 Map 类集合 KV，而不是 keySet 方式进行遍历。"></a>8.使用 entrySet 遍历 Map 类集合 KV，而不是 keySet 方式进行遍历。</h3><p>说明：<br>keySet 其实是遍历了 2 次，一次是转为 Iterator 对象，另一次是从 hashMap 中取出 key 所对应的<br>value。而 entrySet 只是遍历了一次就把 key 和 value 都放到了 entry 中，效率更高。如果是 JDK8，使用<br>Map.forEach 方法。<br>正例：<br>values()返回的是 V 值集合，是一个 list 集合对象；<br>keySet()返回的是 K 值集合，是一个 Set 集合对<br>象；entrySet()返回的是 K-V 值组合集合。</p><h3 id="9-高度注意-Map-类集合-K-V-能不能存储-null-值的情况，如下表格："><a href="#9-高度注意-Map-类集合-K-V-能不能存储-null-值的情况，如下表格：" class="headerlink" title="9.高度注意 Map 类集合 K/V 能不能存储 null 值的情况，如下表格："></a>9.高度注意 Map 类集合 K/V 能不能存储 null 值的情况，如下表格：</h3><p><img src="/blog/img/map_K_V.png" alt="avatar"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;集合处理&quot;&gt;&lt;a href=&quot;#集合处理&quot; class=&quot;headerlink&quot; title=&quot;集合处理&quot;&gt;&lt;/a&gt;集合处理&lt;/h2&gt;&lt;h3 id=&quot;1-关于-hashCode-和-equals-的处理，遵循如下规则：&quot;&gt;&lt;a href=&quot;#1-关于-hashCo</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Java移位运算符</title>
