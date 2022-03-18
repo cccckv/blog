@@ -6,7 +6,7 @@
   <link href="https://cccckv.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://cccckv.github.io/blog/"/>
-  <updated>2022-03-18T06:50:49.981Z</updated>
+  <updated>2022-03-18T06:57:38.375Z</updated>
   <id>https://cccckv.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ArrayList and Vector and LinkedList</title>
-    <link href="https://cccckv.github.io/blog/2022/03/18/c++%E7%BC%96%E8%AF%91%E6%AD%A5%E9%AA%A4/"/>
-    <id>https://cccckv.github.io/blog/2022/03/18/c++%E7%BC%96%E8%AF%91%E6%AD%A5%E9%AA%A4/</id>
-    <published>2022-03-18T06:37:50.000Z</published>
-    <updated>2022-03-18T06:50:49.981Z</updated>
+    <title>c++编译步骤</title>
+    <link href="https://cccckv.github.io/blog/2022/03/18/c-%E7%BC%96%E8%AF%91%E6%AD%A5%E9%AA%A4/"/>
+    <id>https://cccckv.github.io/blog/2022/03/18/c-%E7%BC%96%E8%AF%91%E6%AD%A5%E9%AA%A4/</id>
+    <published>2022-03-18T06:57:13.000Z</published>
+    <updated>2022-03-18T06:57:38.375Z</updated>
     
     <content type="html"><![CDATA[<h2 id="c语言的编译步骤"><a href="#c语言的编译步骤" class="headerlink" title="c语言的编译步骤"></a>c语言的编译步骤</h2><h3 id="1-预处理"><a href="#1-预处理" class="headerlink" title="1.预处理"></a>1.预处理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.c -o hello.i</span><br></pre></td></tr></table></figure><h5 id="1）带-的语句为预处理指令，在预处理的时候处理了。"><a href="#1）带-的语句为预处理指令，在预处理的时候处理了。" class="headerlink" title="1）带#的语句为预处理指令，在预处理的时候处理了。"></a>1）带#的语句为预处理指令，在预处理的时候处理了。</h5><h5 id="2）头文件展开-include-lt-stdio-h-gt-预处理时将stdio-h文件拷贝至预处理文件中"><a href="#2）头文件展开-include-lt-stdio-h-gt-预处理时将stdio-h文件拷贝至预处理文件中" class="headerlink" title="2）头文件展开: #include &lt;stdio.h&gt; 预处理时将stdio.h文件拷贝至预处理文件中"></a>2）头文件展开: #include &lt;stdio.h&gt; 预处理时将stdio.h文件拷贝至预处理文件中</h5><h5 id="3）删除注释"><a href="#3）删除注释" class="headerlink" title="3）删除注释"></a>3）删除注释</h5><h5 id="4）宏替换：-define-PI-3-14-代表声明宏，预处理时会将宏替代"><a href="#4）宏替换：-define-PI-3-14-代表声明宏，预处理时会将宏替代" class="headerlink" title="4）宏替换：#define PI 3.14 代表声明宏，预处理时会将宏替代"></a>4）宏替换：#define PI 3.14 代表声明宏，预处理时会将宏替代</h5><h5 id="5）预处理不检查语法错误"><a href="#5）预处理不检查语法错误" class="headerlink" title="5）预处理不检查语法错误"></a>5）预处理不检查语法错误</h5><h5 id="6）条件编译-if-0-gt-endif-（条件不成立不进行预处理）"><a href="#6）条件编译-if-0-gt-endif-（条件不成立不进行预处理）" class="headerlink" title="6）条件编译 #if 0 -&gt; endif （条件不成立不进行预处理）"></a>6）条件编译 #if 0 -&gt; endif （条件不成立不进行预处理）</h5><h3 id="2-编译"><a href="#2-编译" class="headerlink" title="2.编译"></a>2.编译</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i -o hello.s</span><br></pre></td></tr></table></figure><h5 id="1）将预处理文件编译生成汇编文件"><a href="#1）将预处理文件编译生成汇编文件" class="headerlink" title="1）将预处理文件编译生成汇编文件"></a>1）将预处理文件编译生成汇编文件</h5><h5 id="2）检查语法错误"><a href="#2）检查语法错误" class="headerlink" title="2）检查语法错误"></a>2）检查语法错误</h5><h3 id="3-汇编"><a href="#3-汇编" class="headerlink" title="3.汇编"></a>3.汇编</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.s -c hello.o</span><br></pre></td></tr></table></figure><h5 id="将汇编文件编译生成二进制文件"><a href="#将汇编文件编译生成二进制文件" class="headerlink" title="将汇编文件编译生成二进制文件"></a>将汇编文件编译生成二进制文件</h5><h3 id="4-链接"><a href="#4-链接" class="headerlink" title="4.链接"></a>4.链接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.o -c hello.exe</span><br></pre></td></tr></table></figure><h5 id="设置运行环境，堆栈等，链接其他库"><a href="#设置运行环境，堆栈等，链接其他库" class="headerlink" title="设置运行环境，堆栈等，链接其他库"></a>设置运行环境，堆栈等，链接其他库</h5>]]></content>
     
