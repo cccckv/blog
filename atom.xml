@@ -6,7 +6,7 @@
   <link href="https://cccckv.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://cccckv.github.io/blog/"/>
-  <updated>2022-03-21T09:20:40.011Z</updated>
+  <updated>2022-03-21T09:31:16.248Z</updated>
   <id>https://cccckv.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>float double</title>
+    <link href="https://cccckv.github.io/blog/2022/03/21/%E6%B5%AE%E7%82%B9%E5%9E%8B/"/>
+    <id>https://cccckv.github.io/blog/2022/03/21/%E6%B5%AE%E7%82%B9%E5%9E%8B/</id>
+    <published>2022-03-21T08:08:19.000Z</published>
+    <updated>2022-03-21T09:31:16.248Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="float保证精度到小数点后6位"><a href="#float保证精度到小数点后6位" class="headerlink" title="float保证精度到小数点后6位"></a>float保证精度到小数点后6位</h2><h2 id="double保证精度到小数点后14位"><a href="#double保证精度到小数点后14位" class="headerlink" title="double保证精度到小数点后14位"></a>double保证精度到小数点后14位</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">double a = 3.141592 65462;</span><br><span class="line">float a = 3.141592 65462;</span><br><span class="line">printf(&quot;%.8lf\n&quot;); // 3.141592 65</span><br><span class="line">printf(&quot;%.8f\n&quot;); // 3.141592 74</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;float保证精度到小数点后6位&quot;&gt;&lt;a href=&quot;#float保证精度到小数点后6位&quot; class=&quot;headerlink&quot; title=&quot;float保证精度到小数点后6位&quot;&gt;&lt;/a&gt;float保证精度到小数点后6位&lt;/h2&gt;&lt;h2 id=&quot;double保证精</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>printf及char</title>
