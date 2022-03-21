@@ -6,7 +6,7 @@
   <link href="https://cccckv.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://cccckv.github.io/blog/"/>
-  <updated>2022-03-21T07:19:26.661Z</updated>
+  <updated>2022-03-21T08:12:15.702Z</updated>
   <id>https://cccckv.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>printf</title>
+    <link href="https://cccckv.github.io/blog/2022/03/21/printf/"/>
+    <id>https://cccckv.github.io/blog/2022/03/21/printf/</id>
+    <published>2022-03-21T08:08:19.000Z</published>
+    <updated>2022-03-21T08:12:15.702Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="整数printf-格式"><a href="#整数printf-格式" class="headerlink" title="整数printf();格式"></a>整数printf();格式</h2><h3 id="d-有符号打印int"><a href="#d-有符号打印int" class="headerlink" title="%d 有符号打印int"></a>%d 有符号打印int</h3><h3 id="u-无符号打印int"><a href="#u-无符号打印int" class="headerlink" title="%u 无符号打印int"></a>%u 无符号打印int</h3><h3 id="hd-有符号打印short"><a href="#hd-有符号打印short" class="headerlink" title="%hd 有符号打印short"></a>%hd 有符号打印short</h3><h3 id="hu-无符号打印short"><a href="#hu-无符号打印short" class="headerlink" title="%hu 无符号打印short"></a>%hu 无符号打印short</h3><h3 id="ld-有符号打印long"><a href="#ld-有符号打印long" class="headerlink" title="%ld 有符号打印long"></a>%ld 有符号打印long</h3><h3 id="lu-无符号打印long"><a href="#lu-无符号打印long" class="headerlink" title="%lu 无符号打印long"></a>%lu 无符号打印long</h3><h2 id="sizeof关键字-测量数据类型大小"><a href="#sizeof关键字-测量数据类型大小" class="headerlink" title="sizeof关键字 测量数据类型大小"></a>sizeof关键字 测量数据类型大小</h2><h3 id="printf-“-d-n”-sizeof-int"><a href="#printf-“-d-n”-sizeof-int" class="headerlink" title="printf(“%d\n”,sizeof(int));"></a>printf(“%d\n”,sizeof(int));</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;整数printf-格式&quot;&gt;&lt;a href=&quot;#整数printf-格式&quot; class=&quot;headerlink&quot; title=&quot;整数printf();格式&quot;&gt;&lt;/a&gt;整数printf();格式&lt;/h2&gt;&lt;h3 id=&quot;d-有符号打印int&quot;&gt;&lt;a href=&quot;#d-有</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>进制</title>
