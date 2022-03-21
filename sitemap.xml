@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cccckv.github.io/blog/2022/03/21/%E8%BF%9B%E5%88%B6/</loc>
+    
+    <lastmod>2022-03-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cccckv.github.io/blog/2022/03/18/c-%E7%BC%96%E8%AF%91%E6%AD%A5%E9%AA%A4/</loc>
     
     <lastmod>2022-03-18</lastmod>
@@ -85,7 +94,7 @@
 
   <url>
     <loc>https://cccckv.github.io/blog</loc>
-    <lastmod>2022-03-18</lastmod>
+    <lastmod>2022-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
