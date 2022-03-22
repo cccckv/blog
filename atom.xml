@@ -6,7 +6,7 @@
   <link href="https://cccckv.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://cccckv.github.io/blog/"/>
-  <updated>2022-03-21T09:31:16.248Z</updated>
+  <updated>2022-03-22T09:17:01.971Z</updated>
   <id>https://cccckv.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组</title>
+    <link href="https://cccckv.github.io/blog/2022/03/22/%E6%95%B0%E7%BB%84/"/>
+    <id>https://cccckv.github.io/blog/2022/03/22/%E6%95%B0%E7%BB%84/</id>
+    <published>2022-03-22T02:49:17.000Z</published>
+    <updated>2022-03-22T09:17:01.971Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="将若干个相同数据类型的变量存放在一个连续的内存空间"><a href="#将若干个相同数据类型的变量存放在一个连续的内存空间" class="headerlink" title="将若干个相同数据类型的变量存放在一个连续的内存空间"></a>将若干个相同数据类型的变量存放在一个连续的内存空间</h3><h3 id="数组的最小单位是-元素"><a href="#数组的最小单位是-元素" class="headerlink" title="数组的最小单位是 元素"></a>数组的最小单位是 元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int num[10] = &#123;0,1,5,2,3,6,4,7,8,9&#125;;</span><br><span class="line"></span><br><span class="line">int arr[10];</span><br><span class="line">for(int i = 0; i &lt; sizeof(arr)/sizeof(arr[0]); i++)&#123;</span><br><span class="line">printf(&quot;%d\n&quot;,arr[i]);//输出随机值，各个系统可能不一样</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int num[10] = &#123;1,2&#125;; //初始化部分元素，其他元素将被初始化为0</span><br><span class="line">int num[10] = &#123;0&#125;; //将所有元素初始化为0</span><br><span class="line">int num[] = &#123;0，1，2，3，4，5&#125; //定义时没有定义大小，数组元素个数将由&#123;&#125;中的个数决定</span><br><span class="line">int num[]; // err </span><br></pre></td></tr></table></figure><h2 id="数组大小"><a href="#数组大小" class="headerlink" title="数组大小"></a>数组大小</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int num[10] = &#123;0,1,2,3,4,5,6,7,8,9&#125;;</span><br><span class="line">printf(&quot;%d\n&quot;,sizeof(num));  //40</span><br><span class="line">//求元素个数</span><br><span class="line">int n = sizeof(num)/sizeof(num[0]);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><h3 id="启动一个程序，系统会给这个程序分配一块内存空间，内存的最小单位是一个字节，每个字节都会有一个编号，这就是内存地址。"><a href="#启动一个程序，系统会给这个程序分配一块内存空间，内存的最小单位是一个字节，每个字节都会有一个编号，这就是内存地址。" class="headerlink" title="启动一个程序，系统会给这个程序分配一块内存空间，内存的最小单位是一个字节，每个字节都会有一个编号，这就是内存地址。"></a>启动一个程序，系统会给这个程序分配一块内存空间，内存的最小单位是一个字节，每个字节都会有一个编号，这就是内存地址。</h3><h3 id="数据在内存中的地址，是它在内存中的起始地址。"><a href="#数据在内存中的地址，是它在内存中的起始地址。" class="headerlink" title="数据在内存中的地址，是它在内存中的起始地址。"></a>数据在内存中的地址，是它在内存中的起始地址。</h3><h2 id="数组在内存中的存储"><a href="#数组在内存中的存储" class="headerlink" title="数组在内存中的存储"></a>数组在内存中的存储</h2><p><img src="/blog/img/%E6%95%B0%E7%BB%84%E7%9A%84%E5%AD%98%E5%82%A8.png" alt="avatar"></p><h3 id="数组的地址和数组名"><a href="#数组的地址和数组名" class="headerlink" title="数组的地址和数组名"></a>数组的地址和数组名</h3><h4 id="int-a-10"><a href="#int-a-10" class="headerlink" title="int a[10]"></a>int a[10]</h4><h4 id="数组名a-等价于第0个元素的地址。"><a href="#数组名a-等价于第0个元素的地址。" class="headerlink" title="数组名a 等价于第0个元素的地址。"></a>数组名a 等价于第0个元素的地址。</h4><h4 id="数组名是常量，不能被赋值。"><a href="#数组名是常量，不能被赋值。" class="headerlink" title="数组名是常量，不能被赋值。"></a>数组名是常量，不能被赋值。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int arr[5];</span><br><span class="line">printf(&quot;%u\n&quot;,&amp;a[0]);</span><br><span class="line">printf(&quot;%u\n&quot;,a);</span><br><span class="line">printf(&quot;%u\n&quot;,&amp;a);</span><br><span class="line"></span><br><span class="line">printf(&quot;%u\n&quot;,&amp;a[0]+1);</span><br><span class="line">printf(&quot;%u\n&quot;,a+1);</span><br><span class="line">printf(&quot;%u\n&quot;,&amp;a+1);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h2&gt;&lt;h3 id=&quot;将若干个相同数据类型的变量存放在一个连续的内存空间&quot;&gt;&lt;a href=&quot;#将若干个相同数据类型的变量存放在一个连续的内存空间&quot; c</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常用限定符</title>
+    <link href="https://cccckv.github.io/blog/2022/03/22/%E5%B8%B8%E7%94%A8%E9%99%90%E5%AE%9A%E7%AC%A6/"/>
+    <id>https://cccckv.github.io/blog/2022/03/22/%E5%B8%B8%E7%94%A8%E9%99%90%E5%AE%9A%E7%AC%A6/</id>
+    <published>2022-03-22T00:48:26.000Z</published>
+    <updated>2022-03-22T00:54:11.511Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">extern 声明，(告诉编译器有这个东西，不开辟空间)</span><br><span class="line"></span><br><span class="line">const 定义一个常量，修饰内容不可改变</span><br><span class="line"></span><br><span class="line">volatile 防止编译器优化代码</span><br><span class="line"></span><br><span class="line">Reguster 建议将变量定义在寄存器中</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;限定符&quot;&gt;&lt;a href=&quot;#限定符&quot; class=&quot;headerlink&quot; title=&quot;限定符&quot;&gt;&lt;/a&gt;限定符&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>printf及char</title>
+    <link href="https://cccckv.github.io/blog/2022/03/21/printf/"/>
+    <id>https://cccckv.github.io/blog/2022/03/21/printf/</id>
+    <published>2022-03-21T08:08:19.000Z</published>
+    <updated>2022-03-22T01:31:48.062Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="整数printf-格式"><a href="#整数printf-格式" class="headerlink" title="整数printf();格式"></a>整数printf();格式</h2><h3 id="d-有符号打印int"><a href="#d-有符号打印int" class="headerlink" title="%d 有符号打印int"></a>%d 有符号打印int</h3><h3 id="u-无符号打印int"><a href="#u-无符号打印int" class="headerlink" title="%u 无符号打印int"></a>%u 无符号打印int</h3><h3 id="hd-有符号打印short"><a href="#hd-有符号打印short" class="headerlink" title="%hd 有符号打印short"></a>%hd 有符号打印short</h3><h3 id="hu-无符号打印short"><a href="#hu-无符号打印short" class="headerlink" title="%hu 无符号打印short"></a>%hu 无符号打印short</h3><h3 id="ld-有符号打印long"><a href="#ld-有符号打印long" class="headerlink" title="%ld 有符号打印long"></a>%ld 有符号打印long</h3><h3 id="lu-无符号打印long"><a href="#lu-无符号打印long" class="headerlink" title="%lu 无符号打印long"></a>%lu 无符号打印long</h3><h2 id="sizeof关键字-测量数据类型大小"><a href="#sizeof关键字-测量数据类型大小" class="headerlink" title="sizeof关键字 测量数据类型大小"></a>sizeof关键字 测量数据类型大小</h2><h3 id="printf-“-d-n”-sizeof-int"><a href="#printf-“-d-n”-sizeof-int" class="headerlink" title="printf(“%d\n”,sizeof(int));"></a>printf(“%d\n”,sizeof(int));</h3><h2 id="char-字符存到内存中的是字符对应的ascii值-。ascii-最大值127。"><a href="#char-字符存到内存中的是字符对应的ascii值-。ascii-最大值127。" class="headerlink" title="char (字符存到内存中的是字符对应的ascii值 。ascii 最大值127。)"></a>char (字符存到内存中的是字符对应的ascii值 。ascii 最大值127。)</h2><h3 id="c-打印ascii值对应的字符"><a href="#c-打印ascii值对应的字符" class="headerlink" title="%c 打印ascii值对应的字符"></a>%c 打印ascii值对应的字符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">char ch = &#x27;a&#x27;;</span><br><span class="line">printf(&quot;%d\n&quot;,sizeof(ch));  // -&gt;1</span><br><span class="line">printf(&quot;%d\n&quot;,sizeof(&#x27;a&#x27;));  // -&gt;4  ==&gt; printf(&quot;%d\n&quot;,sizeof(97))；</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">char ch = &#x27;a&#x27;;</span><br><span class="line">int num = &#x27;a&#x27; - &#x27; &#x27;;//求A的ascii值</span><br><span class="line">int num2 = &#x27;A&#x27; + &#x27; &#x27;；</span><br><span class="line"></span><br><span class="line">char ch2 = &#x27;8&#x27;;</span><br><span class="line">int num3 = &#x27;8&#x27; - &#x27;0&#x27;;// 将数字字符转成数字</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="从键盘读取字符-回车（-n）-算一个字符-‘-n’-10"><a href="#从键盘读取字符-回车（-n）-算一个字符-‘-n’-10" class="headerlink" title="从键盘读取字符 (回车（\n） 算一个字符 ‘\n’=10 )"></a>从键盘读取字符 (回车（\n） 算一个字符 ‘\n’=10 )</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">char ch = 0;</span><br><span class="line">char num = 0;</span><br><span class="line">scanf(&quot;%c&quot;, &amp;ch);</span><br><span class="line">printf(&quot;%c\n&quot;, ch);</span><br><span class="line">scanf(&quot;%c&quot;, &amp;ch); //不加此句将无法分次读取字符</span><br><span class="line">scanf(&quot;%c&quot;,num);</span><br><span class="line">printf(&quot;%c\n&quot;, num);</span><br><span class="line"></span><br><span class="line">ch = getchar();//相当于scanf(&quot;%c&quot;, &amp;ch);</span><br><span class="line"></span><br><span class="line">char ch = &#x27;a&#x27;;</span><br><span class="line">putchar(ch); //输出ch字符 &#x27;a&#x27;  (不会换行) -&gt;printf(&quot;%c\n&quot;,ch);</span><br><span class="line">printf(&quot;%d\n&quot;,ch); // 输出ch字符值 97</span><br></pre></td></tr></table></figure><h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p><img src="/blog/img/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6.png" alt="avatar"></p><h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><h3 id="字符串常量后会加一个-0（’-0’ascii值为0）"><a href="#字符串常量后会加一个-0（’-0’ascii值为0）" class="headerlink" title="字符串常量后会加一个\0（’\0’ascii值为0）"></a>字符串常量后会加一个\0（’\0’ascii值为0）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;%s\n&quot;,&quot;abc&quot;); //在内存中实际上是&quot;abc\0&quot;-&gt;&quot;9798990&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;整数printf-格式&quot;&gt;&lt;a href=&quot;#整数printf-格式&quot; class=&quot;headerlink&quot; title=&quot;整数printf();格式&quot;&gt;&lt;/a&gt;整数printf();格式&lt;/h2&gt;&lt;h3 id=&quot;d-有符号打印int&quot;&gt;&lt;a href=&quot;#d-有</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>float double</title>
@@ -29,26 +89,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;float保证精度到小数点后6位&quot;&gt;&lt;a href=&quot;#float保证精度到小数点后6位&quot; class=&quot;headerlink&quot; title=&quot;float保证精度到小数点后6位&quot;&gt;&lt;/a&gt;float保证精度到小数点后6位&lt;/h2&gt;&lt;h2 id=&quot;double保证精</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>printf及char</title>
-    <link href="https://cccckv.github.io/blog/2022/03/21/printf/"/>
-    <id>https://cccckv.github.io/blog/2022/03/21/printf/</id>
-    <published>2022-03-21T08:08:19.000Z</published>
-    <updated>2022-03-21T09:20:40.011Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="整数printf-格式"><a href="#整数printf-格式" class="headerlink" title="整数printf();格式"></a>整数printf();格式</h2><h3 id="d-有符号打印int"><a href="#d-有符号打印int" class="headerlink" title="%d 有符号打印int"></a>%d 有符号打印int</h3><h3 id="u-无符号打印int"><a href="#u-无符号打印int" class="headerlink" title="%u 无符号打印int"></a>%u 无符号打印int</h3><h3 id="hd-有符号打印short"><a href="#hd-有符号打印short" class="headerlink" title="%hd 有符号打印short"></a>%hd 有符号打印short</h3><h3 id="hu-无符号打印short"><a href="#hu-无符号打印short" class="headerlink" title="%hu 无符号打印short"></a>%hu 无符号打印short</h3><h3 id="ld-有符号打印long"><a href="#ld-有符号打印long" class="headerlink" title="%ld 有符号打印long"></a>%ld 有符号打印long</h3><h3 id="lu-无符号打印long"><a href="#lu-无符号打印long" class="headerlink" title="%lu 无符号打印long"></a>%lu 无符号打印long</h3><h2 id="sizeof关键字-测量数据类型大小"><a href="#sizeof关键字-测量数据类型大小" class="headerlink" title="sizeof关键字 测量数据类型大小"></a>sizeof关键字 测量数据类型大小</h2><h3 id="printf-“-d-n”-sizeof-int"><a href="#printf-“-d-n”-sizeof-int" class="headerlink" title="printf(“%d\n”,sizeof(int));"></a>printf(“%d\n”,sizeof(int));</h3><h2 id="char-字符存到内存中的是字符对应的ascii值-。ascii-最大值127。"><a href="#char-字符存到内存中的是字符对应的ascii值-。ascii-最大值127。" class="headerlink" title="char (字符存到内存中的是字符对应的ascii值 。ascii 最大值127。)"></a>char (字符存到内存中的是字符对应的ascii值 。ascii 最大值127。)</h2><h3 id="c-打印ascii值对应的字符"><a href="#c-打印ascii值对应的字符" class="headerlink" title="%c 打印ascii值对应的字符"></a>%c 打印ascii值对应的字符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">char ch = &#x27;a&#x27;;</span><br><span class="line">printf(&quot;%d\n&quot;,sizeof(ch));  // -&gt;1</span><br><span class="line">printf(&quot;%d\n&quot;,sizeof(&#x27;a&#x27;));  // -&gt;4  ==&gt; printf(&quot;%d\n&quot;,sizeof(97))；</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">char ch = &#x27;a&#x27;;</span><br><span class="line">int num = &#x27;a&#x27; - &#x27; &#x27;;//求A的ascii值</span><br><span class="line">int num2 = &#x27;A&#x27; + &#x27; &#x27;；</span><br><span class="line"></span><br><span class="line">char ch2 = &#x27;8&#x27;;</span><br><span class="line">int num3 = &#x27;8&#x27; - &#x27;0&#x27;;// 将数字字符转成数字</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="从键盘读取字符-回车（-n）-算一个字符-‘-n’-10"><a href="#从键盘读取字符-回车（-n）-算一个字符-‘-n’-10" class="headerlink" title="从键盘读取字符 (回车（\n） 算一个字符 ‘\n’=10 )"></a>从键盘读取字符 (回车（\n） 算一个字符 ‘\n’=10 )</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">char ch = 0;</span><br><span class="line">char num = 0;</span><br><span class="line">scanf(&quot;%c&quot;, &amp;ch);</span><br><span class="line">printf(&quot;%c\n&quot;, ch);</span><br><span class="line">scanf(&quot;%c&quot;, &amp;ch); //不加此句将无法分次读取字符</span><br><span class="line">scanf(&quot;%c&quot;,num);</span><br><span class="line">printf(&quot;%c\n&quot;, num);</span><br></pre></td></tr></table></figure><h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p><img src="/blog/img/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6.png" alt="avatar"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;整数printf-格式&quot;&gt;&lt;a href=&quot;#整数printf-格式&quot; class=&quot;headerlink&quot; title=&quot;整数printf();格式&quot;&gt;&lt;/a&gt;整数printf();格式&lt;/h2&gt;&lt;h3 id=&quot;d-有符号打印int&quot;&gt;&lt;a href=&quot;#d-有</summary>
       
     
     
