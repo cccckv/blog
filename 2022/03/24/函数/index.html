@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>函数 | The grave of brain cells</title><meta name="author" content="ccccckw"><meta name="copyright" content="ccccckw"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="函数定义mainFun.cpp123456789#include &lt;stdio.h&gt;#include &lt;testFun.h&gt;int main()&amp;#123;	int a &#x3D; 10;	int b &#x3D; 20;	printf(&quot;%d\n&quot;,maxNum(a,b));&amp;#125; testFun.h12int maxNum(int a, int b); test">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数">
+<meta property="og:url" content="https://cccckv.github.io/blog/2022/03/24/%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="The grave of brain cells">
+<meta property="og:description" content="函数定义mainFun.cpp123456789#include &lt;stdio.h&gt;#include &lt;testFun.h&gt;int main()&amp;#123;	int a &#x3D; 10;	int b &#x3D; 20;	printf(&quot;%d\n&quot;,maxNum(a,b));&amp;#125; testFun.h12int maxNum(int a, int b); test">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cccckv.github.io/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg">
+<meta property="article:published_time" content="2022-03-24T03:30:37.000Z">
+<meta property="article:modified_time" content="2022-03-25T06:11:59.393Z">
+<meta property="article:author" content="ccccckw">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cccckv.github.io/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://cccckv.github.io/blog/2022/03/24/%E5%87%BD%E6%95%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '函数',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-25 14:11:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/blog/atom.xml" title="The grave of brain cells" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/blog/archives/"><div class="headline">Articles</div><div class="length-num">18</div></a></div><div class="data-item"><a href="/blog/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/blog/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">The grave of brain cells</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">函数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-24T03:30:37.000Z" title="Created 2022-03-24 11:30:37">2022-03-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-25T06:11:59.393Z" title="Updated 2022-03-25 14:11:59">2022-03-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="函数"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h2><h3 id="mainFun-cpp"><a href="#mainFun-cpp" class="headerlink" title="mainFun.cpp"></a>mainFun.cpp</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;testFun.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">	int a = 10;</span><br><span class="line">	int b = 20;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,maxNum(a,b));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="testFun-h"><a href="#testFun-h" class="headerlink" title="testFun.h"></a>testFun.h</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int maxNum(int a, int b);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="testFun-cpp"><a href="#testFun-cpp" class="headerlink" title="testFun.cpp"></a>testFun.cpp</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;testFun.h&gt;</span></span><br><span class="line">int maxNum(int a, int b)&#123;</span><br><span class="line">	<span class="built_in">return</span> a&gt;b?a:b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="防止头文件重复包含"><a href="#防止头文件重复包含" class="headerlink" title="防止头文件重复包含"></a>防止头文件重复包含</h2><h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#ifndef _TEST_FUN_ //如果不存在宏</span><br><span class="line">#define _TEST_FUN_ //定义宏</span><br><span class="line"></span><br><span class="line">int maxNum(int a, int b);</span><br><span class="line"></span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#pragma once</span><br><span class="line"></span><br><span class="line">int maxNum(int a, int b);</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ccccckw</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://cccckv.github.io/blog/2022/03/24/%E5%87%BD%E6%95%B0/">https://cccckv.github.io/blog/2022/03/24/%E5%87%BD%E6%95%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/2022/03/25/%E6%8C%87%E9%92%88/"><img class="prev-cover" src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">指针</div></div></a></div><div class="next-post pull-right"><a href="/blog/2022/03/23/%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E6%95%B0/"><img class="next-cover" src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">获取随机数</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ccccckw</div><div class="author-info__description">改变世界</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/blog/archives/"><div class="headline">Articles</div><div class="length-num">18</div></a></div><div class="card-info-data-item"><a href="/blog/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/blog/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">函数定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mainFun-cpp"><span class="toc-number">1.1.</span> <span class="toc-text">mainFun.cpp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#testFun-h"><span class="toc-number">1.2.</span> <span class="toc-text">testFun.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#testFun-cpp"><span class="toc-number">1.3.</span> <span class="toc-text">testFun.cpp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E6%AD%A2%E5%A4%B4%E6%96%87%E4%BB%B6%E9%87%8D%E5%A4%8D%E5%8C%85%E5%90%AB"><span class="toc-number">2.</span> <span class="toc-text">防止头文件重复包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">第一种方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">第二种方法</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/25/%E6%8C%87%E9%92%88/" title="指针"><img src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="指针"/></a><div class="content"><a class="title" href="/blog/2022/03/25/%E6%8C%87%E9%92%88/" title="指针">指针</a><time datetime="2022-03-25T07:01:12.000Z" title="Created 2022-03-25 15:01:12">2022-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/24/%E5%87%BD%E6%95%B0/" title="函数"><img src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="函数"/></a><div class="content"><a class="title" href="/blog/2022/03/24/%E5%87%BD%E6%95%B0/" title="函数">函数</a><time datetime="2022-03-24T03:30:37.000Z" title="Created 2022-03-24 11:30:37">2022-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/23/%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E6%95%B0/" title="获取随机数"><img src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="获取随机数"/></a><div class="content"><a class="title" href="/blog/2022/03/23/%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E6%95%B0/" title="获取随机数">获取随机数</a><time datetime="2022-03-23T08:00:49.000Z" title="Created 2022-03-23 16:00:49">2022-03-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/23/scanf%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="scanf和库函数"><img src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="scanf和库函数"/></a><div class="content"><a class="title" href="/blog/2022/03/23/scanf%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="scanf和库函数">scanf和库函数</a><time datetime="2022-03-23T07:02:17.000Z" title="Created 2022-03-23 15:02:17">2022-03-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/22/%E6%95%B0%E7%BB%84/" title="数组"><img src="/blog/img/F5E45034FF1170F885A0B44F0175D15C.jpg" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="数组"/></a><div class="content"><a class="title" href="/blog/2022/03/22/%E6%95%B0%E7%BB%84/" title="数组">数组</a><time datetime="2022-03-22T02:49:17.000Z" title="Created 2022-03-22 10:49:17">2022-03-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By ccccckw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
